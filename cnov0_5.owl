@@ -3,15 +3,14 @@
 @prefix BFO1SNAP: <http://www.ifomis.org/bfo/1.1/snap#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix definition: <http://purl.obolibrary.org/obo/IAO_0000115> .
-@prefix hasPart: <http://purl.obolibrary.org/obo/BFO_0000051> .
 @prefix defSource: <http://purl.obolibrary.org/obo/IAO_0000119> .
+@prefix hasPart: <http://purl.obolibrary.org/obo/BFO_0000051> .
 @prefix IAO: <http://purl.obolibrary.org/obo/IAO_> .
 @prefix OBI: <http://purl.obolibrary.org/obo/OBI_> .
-@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix OBOANN: <http://ontology.neuinfo.org/NIF/Backend/OBO_annotation_properties.owl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix ro: <http://www.obofoundry.org/ro/ro.owl#> .
+@prefix SBO: <http://purl.obolibrary.org/obo/SBO_> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -19,9 +18,9 @@
     owl:imports <http://ontology.neuinfo.org/NIF/ttl/OBO_annotation_properties.ttl>,
         <http://ontology.neuinfo.org/NIF/ttl/unused/ro_bfo1-1_bridge.owl>,
         <http://protege.stanford.edu/plugins/owl/dc/protege-dc.owl>,
+        <http://purl.obolibrary.org/obo/ro.owl>,
         <http://purl.org/incf/ontology/Computational_Neurosciences/external_import/external.owl>,
-        <http://www.w3.org/2004/02/skos/core>,
-        obo:ro.owl ;
+        <http://www.w3.org/2004/02/skos/core> ;
     dc:title "Computational Neuroscience Ontology"^^xsd:string ;
     rdfs:comment """This ontology is used to add the Definition class of annotation as in NIF.
 The source of the definition can be defined with class from OBO-annotation"""^^xsd:string,
@@ -94,7 +93,7 @@ defSource: a owl:AnnotationProperty .
 <http://purl.org/incf/ontology/Computational_Neurosciences/cno_alpha.owl#cno_0000004> a owl:Class ;
     rdfs:label "reset potential"^^xsd:string ;
     skos:definition "value of the membrane potential at which the model is maintained after the emission of a spike."^^xsd:string ;
-    rdfs:subClassOf obo:SBO_0000259 ;
+    rdfs:subClassOf SBO:0000259 ;
     owl:disjointWith skos:Collection,
         skos:Concept,
         skos:ConceptScheme ;
@@ -285,7 +284,7 @@ It should contain models like Fitzhugh-Nagumo, Morris-Lecar models."""^^xsd:stri
 <http://purl.org/incf/ontology/Computational_Neurosciences/cno_alpha.owl#cno_0000038> a owl:Class ;
     rdfs:label "resting membrane potential"^^xsd:string ;
     skos:definition "value of the neuronal membrane potential at rest"^^xsd:string ;
-    rdfs:subClassOf obo:SBO_0000259 ;
+    rdfs:subClassOf SBO:0000259 ;
     rdfs:comment ""^^xsd:string .
 
 <http://purl.org/incf/ontology/Computational_Neurosciences/cno_alpha.owl#cno_0000039> a owl:Class ;
@@ -654,7 +653,7 @@ It should contain models like Fitzhugh-Nagumo, Morris-Lecar models."""^^xsd:stri
 <http://purl.org/incf/ontology/Computational_Neurosciences/cno_alpha.owl#cno_0000099> a owl:Class ;
     rdfs:label "synaptic delay"^^xsd:string ;
     skos:definition "delay between the activation of the synapse and its impact on the post-synaptic model."^^xsd:string ;
-    rdfs:subClassOf obo:SBO_0000225 .
+    rdfs:subClassOf SBO:0000225 .
 
 <http://purl.org/incf/ontology/Computational_Neurosciences/cno_alpha.owl#cno_0000100> a owl:Class ;
     rdfs:label "voltage dependent receptor activation"^^xsd:string ;
@@ -829,7 +828,7 @@ It should contain models like Fitzhugh-Nagumo, Morris-Lecar models."""^^xsd:stri
 
 <http://purl.org/incf/ontology/Computational_Neurosciences/cno_alpha.owl#cno_0000133> a owl:Class ;
     rdfs:label "diameter"^^xsd:string ;
-    rdfs:subClassOf obo:SBO_0000465 .
+    rdfs:subClassOf SBO:0000465 .
 
 <http://purl.org/incf/ontology/Computational_Neurosciences/cno_alpha.owl#cno_0000134> a owl:Class ;
     rdfs:label "length"^^xsd:string ;
@@ -845,7 +844,7 @@ It should contain models like Fitzhugh-Nagumo, Morris-Lecar models."""^^xsd:stri
 
 <http://purl.org/incf/ontology/Computational_Neurosciences/cno_alpha.owl#cno_0000137> a owl:Class ;
     rdfs:label "maximal conductance"^^xsd:string ;
-    rdfs:subClassOf obo:SBO_0000257 .
+    rdfs:subClassOf SBO:0000257 .
 
 <http://purl.org/incf/ontology/Computational_Neurosciences/cno_alpha.owl#cno_0000138> a owl:Class ;
     rdfs:label "random"^^xsd:string ;
@@ -854,11 +853,11 @@ It should contain models like Fitzhugh-Nagumo, Morris-Lecar models."""^^xsd:stri
 
 <http://purl.org/incf/ontology/Computational_Neurosciences/cno_alpha.owl#cno_0000139> a owl:Class ;
     rdfs:label "spike time"^^xsd:string ;
-    rdfs:subClassOf obo:SBO_0000346 .
+    rdfs:subClassOf SBO:0000346 .
 
 <http://purl.org/incf/ontology/Computational_Neurosciences/cno_alpha.owl#cno_0000140> a owl:Class ;
     rdfs:label "time constant"^^xsd:string ;
-    rdfs:subClassOf obo:SBO_0000346 .
+    rdfs:subClassOf SBO:0000346 .
 
 <http://purl.org/incf/ontology/Computational_Neurosciences/cno_alpha.owl#cno_0000141> a owl:Class ;
     rdfs:label "volume"^^xsd:string ;
@@ -881,12 +880,12 @@ It should contain models like Fitzhugh-Nagumo, Morris-Lecar models."""^^xsd:stri
 <http://purl.org/incf/ontology/Computational_Neurosciences/cno_alpha.owl#cno_0000145> a owl:Class ;
     rdfs:label "refractory period"^^xsd:string ;
     skos:definition "a duration that represent the duration during which the model cannot emit a subsequent spike following an initial spike."^^xsd:string ;
-    rdfs:subClassOf obo:SBO_0000347 .
+    rdfs:subClassOf SBO:0000347 .
 
 <http://purl.org/incf/ontology/Computational_Neurosciences/cno_alpha.owl#cno_0000146> a owl:Class ;
     rdfs:label "spiking threshold"^^xsd:string ;
     skos:definition "voltage above which the model emits a spike"^^xsd:string ;
-    rdfs:subClassOf obo:SBO_0000259 .
+    rdfs:subClassOf SBO:0000259 .
 
 <http://purl.org/incf/ontology/Computational_Neurosciences/cno_alpha.owl#cno_0000147> a owl:Class ;
     rdfs:label """elementary model component role
@@ -1284,12 +1283,12 @@ The model can be enriched with particular spatial embedding."""^^xsd:string .
 <http://purl.org/incf/ontology/Computational_Neurosciences/cno_alpha.owl#cno_0000220> a owl:Class ;
     rdfs:label "membrane capacitance"^^xsd:string ;
     skos:definition "Measure of the amount of electric charge stored (or separated) by the cellular membrane for a given electric potential. The unit of capacitance is the Farad."^^xsd:string ;
-    rdfs:subClassOf obo:SBO_0000258 .
+    rdfs:subClassOf SBO:0000258 .
 
 <http://purl.org/incf/ontology/Computational_Neurosciences/cno_alpha.owl#cno_0000221> a owl:Class ;
     rdfs:label "membrane resistance"^^xsd:string ;
     skos:definition "Measure of the degree to which the cellular membrane opposes the passage of an electric current. The SI unit of electrical resistance is the ohm."^^xsd:string ;
-    rdfs:subClassOf obo:SBO_0000254 .
+    rdfs:subClassOf SBO:0000254 .
 
 <http://purl.org/incf/ontology/Computational_Neurosciences/cno_alpha.owl#cno_0000222> a owl:Class ;
     rdfs:label "membrane time constante"^^xsd:string ;
@@ -1300,8 +1299,6 @@ The model can be enriched with particular spatial embedding."""^^xsd:string .
 OBI:0001617 owl:equivalentClass [ a owl:Restriction ;
             owl:onProperty IAO:0000219 ;
             owl:someValuesFrom <http://purl.org/incf/ontology/Computational_Neurosciences/cno_alpha.owl#cno_0000180> ] .
-
-obo:SBO_0000348 rdfs:subClassOf <http://purl.org/incf/ontology/Computational_Neurosciences/cno_alpha.owl#cno_0000140> .
 
 OBOANN:EnumerationClass owl:disjointWith <http://purl.org/incf/ontology/Computational_Neurosciences/cno_alpha.owl#cno_0000001>,
         <http://purl.org/incf/ontology/Computational_Neurosciences/cno_alpha.owl#cno_0000002>,
@@ -1315,6 +1312,8 @@ OBOANN:EnumerationClass owl:disjointWith <http://purl.org/incf/ontology/Computat
         skos:Collection,
         skos:Concept,
         skos:ConceptScheme .
+
+SBO:0000348 rdfs:subClassOf <http://purl.org/incf/ontology/Computational_Neurosciences/cno_alpha.owl#cno_0000140> .
 
 skos:Collection owl:disjointWith skos:Concept,
         skos:ConceptScheme .
