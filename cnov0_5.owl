@@ -1,6 +1,6 @@
 @prefix : <file:///ERROR/EMPTY/PREFIX/BANNED/> .
 @prefix altTerm: <http://purl.obolibrary.org/obo/IAO_0000118> .
-@prefix BFO1SNAP: <http://www.ifomis.org/bfo/1.1/snap#> .
+@prefix BFO: <http://purl.obolibrary.org/obo/BFO_> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix definition: <http://purl.obolibrary.org/obo/IAO_0000115> .
 @prefix defSource: <http://purl.obolibrary.org/obo/IAO_0000119> .
@@ -16,7 +16,6 @@
 
 <http://purl.org/incf/ontology/Computational_Neurosciences/cno_alpha.owl> a owl:Ontology ;
     owl:imports <http://ontology.neuinfo.org/NIF/ttl/OBO_annotation_properties.ttl>,
-        <http://ontology.neuinfo.org/NIF/ttl/unused/ro_bfo1-1_bridge.owl>,
         <http://protege.stanford.edu/plugins/owl/dc/protege-dc.owl>,
         <http://purl.obolibrary.org/obo/ro.owl>,
         <http://purl.org/incf/ontology/Computational_Neurosciences/external_import/external.owl>,
@@ -49,12 +48,12 @@ defSource: a owl:AnnotationProperty .
 
 <http://purl.org/incf/ontology/Computational_Neurosciences/cno_alpha.owl#cno_0000193> a owl:DatatypeProperty ;
     rdfs:label "name"^^xsd:string ;
-    rdfs:domain BFO1SNAP:GenericallyDependentContinuant ;
+    rdfs:domain BFO:0000031 ;
     rdfs:range xsd:string .
 
 <http://purl.org/incf/ontology/Computational_Neurosciences/cno_alpha.owl#cno_0000204> a owl:DatatypeProperty ;
     rdfs:label "numerical value"^^xsd:string ;
-    rdfs:domain BFO1SNAP:GenericallyDependentContinuant ;
+    rdfs:domain BFO:0000031 ;
     rdfs:range xsd:string .
 
 ### Classes
@@ -63,7 +62,7 @@ defSource: a owl:AnnotationProperty .
     rdfs:label "defined model type"^^xsd:string ;
     skos:altLabel "defined type of model"^^xsd:string ;
     skos:definition "a generically_dependent_continuant that is a category of models regarded as sharing particular characteristics, qualities, and/or defined similarities."^^xsd:string ;
-    rdfs:subClassOf BFO1SNAP:GenericallyDependentContinuant ;
+    rdfs:subClassOf BFO:0000031 ;
     owl:disjointWith skos:Collection,
         skos:Concept,
         skos:ConceptScheme ;
@@ -74,7 +73,7 @@ defSource: a owl:AnnotationProperty .
     rdfs:label "model component"^^xsd:string ;
     skos:altLabel "model element"^^xsd:string ;
     skos:definition "a generically dependent continuant that is a constituent part of a model"^^xsd:string ;
-    rdfs:subClassOf BFO1SNAP:GenericallyDependentContinuant ;
+    rdfs:subClassOf BFO:0000031 ;
     owl:disjointWith skos:Collection,
         skos:Concept,
         skos:ConceptScheme ;
@@ -296,7 +295,7 @@ It should contain models like Fitzhugh-Nagumo, Morris-Lecar models."""^^xsd:stri
 <http://purl.org/incf/ontology/Computational_Neurosciences/cno_alpha.owl#cno_0000040> a owl:Class ;
     rdfs:label "model quality"^^xsd:string ;
     skos:definition "quality that represents a qualitative feature of the model that can be either independent of the model specification or a property resulting of the particular model specification"^^xsd:string ;
-    rdfs:subClassOf BFO1SNAP:Quality ;
+    rdfs:subClassOf BFO:0000019 ;
     owl:disjointWith skos:Collection,
         skos:Concept,
         skos:ConceptScheme .
@@ -404,7 +403,7 @@ It should contain models like Fitzhugh-Nagumo, Morris-Lecar models."""^^xsd:stri
             owl:someValuesFrom <http://purl.org/incf/ontology/Computational_Neurosciences/cno_alpha.owl#cno_0000002> ] ;
     rdfs:label "defined model"^^xsd:string ;
     skos:definition "a generically_dependent_continuant that represent the set of  models commonly used to build other models."^^xsd:string ;
-    rdfs:subClassOf BFO1SNAP:GenericallyDependentContinuant ;
+    rdfs:subClassOf BFO:0000031 ;
     owl:disjointWith skos:Collection,
         skos:Concept,
         skos:ConceptScheme .
@@ -891,7 +890,7 @@ It should contain models like Fitzhugh-Nagumo, Morris-Lecar models."""^^xsd:stri
     rdfs:label """elementary model component role
 """^^xsd:string ;
     skos:definition "role played by the model elements"^^xsd:string ;
-    rdfs:subClassOf BFO1SNAP:Role .
+    rdfs:subClassOf BFO:0000023 .
 
 <http://purl.org/incf/ontology/Computational_Neurosciences/cno_alpha.owl#cno_0000148> a owl:Class ;
     rdfs:label "cellular grouping"^^xsd:string ;
@@ -1078,7 +1077,7 @@ The model can be enriched with particular spatial embedding."""^^xsd:string .
             owl:someValuesFrom <http://purl.org/incf/ontology/Computational_Neurosciences/cno_alpha.owl#cno_0000002> ] ;
     rdfs:label "model"^^xsd:string ;
     skos:definition "a generically_dependent_continuant that is a placeholder for any model"^^xsd:string ;
-    rdfs:subClassOf BFO1SNAP:GenericallyDependentContinuant .
+    rdfs:subClassOf BFO:0000031 .
 
 <http://purl.org/incf/ontology/Computational_Neurosciences/cno_alpha.owl#cno_0000181> a owl:Class ;
     rdfs:label "elementary model component"^^xsd:string ;
@@ -1193,7 +1192,7 @@ The model can be enriched with particular spatial embedding."""^^xsd:string .
 <http://purl.org/incf/ontology/Computational_Neurosciences/cno_alpha.owl#cno_0000202> a owl:Class ;
     rdfs:label "model component quality"^^xsd:string ;
     skos:definition "quality exhibited by model components"^^xsd:string ;
-    rdfs:subClassOf BFO1SNAP:Quality .
+    rdfs:subClassOf BFO:0000019 .
 
 <http://purl.org/incf/ontology/Computational_Neurosciences/cno_alpha.owl#cno_0000203> a owl:Class ;
     rdfs:label "cellular distribution quality"^^xsd:string ;
