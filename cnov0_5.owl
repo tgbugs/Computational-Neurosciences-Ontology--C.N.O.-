@@ -3,6 +3,7 @@
 @prefix BFO1SNAP: <http://www.ifomis.org/bfo/1.1/snap#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix definition: <http://purl.obolibrary.org/obo/IAO_0000115> .
+@prefix hasPart: <http://purl.obolibrary.org/obo/BFO_0000051> .
 @prefix defSource: <http://purl.obolibrary.org/obo/IAO_0000119> .
 @prefix IAO: <http://purl.obolibrary.org/obo/IAO_> .
 @prefix OBI: <http://purl.obolibrary.org/obo/OBI_> .
@@ -400,7 +401,7 @@ It should contain models like Fitzhugh-Nagumo, Morris-Lecar models."""^^xsd:stri
 
 <http://purl.org/incf/ontology/Computational_Neurosciences/cno_alpha.owl#cno_0000060> a owl:Class ;
     owl:equivalentClass [ a owl:Restriction ;
-            owl:onProperty ro:has_part ;
+            owl:onProperty hasPart: ;
             owl:someValuesFrom <http://purl.org/incf/ontology/Computational_Neurosciences/cno_alpha.owl#cno_0000002> ] ;
     rdfs:label "defined model"^^xsd:string ;
     skos:definition "a generically_dependent_continuant that represent the set of  models commonly used to build other models."^^xsd:string ;
@@ -1074,7 +1075,7 @@ The model can be enriched with particular spatial embedding."""^^xsd:string .
 
 <http://purl.org/incf/ontology/Computational_Neurosciences/cno_alpha.owl#cno_0000180> a owl:Class ;
     owl:equivalentClass [ a owl:Restriction ;
-            owl:onProperty ro:has_part ;
+            owl:onProperty hasPart: ;
             owl:someValuesFrom <http://purl.org/incf/ontology/Computational_Neurosciences/cno_alpha.owl#cno_0000002> ] ;
     rdfs:label "model"^^xsd:string ;
     skos:definition "a generically_dependent_continuant that is a placeholder for any model"^^xsd:string ;
